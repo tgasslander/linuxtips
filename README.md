@@ -38,7 +38,7 @@ sudo fdisk -l
 ```
 
 Provided that your SD card is at /dev/sdc1:
-´´´
+```
 sudo mount -t vfat /dev/sdc1 /mnt/sd
 ```
 
