@@ -46,3 +46,9 @@ To list your devices:
 ```
 sudo fdisk -l
 ```
+
+## Find IP addresses on the local network
+The below obviously depends on your network's IP address scheme
+```
+nmap -sP 10.10.1.0/24
+```
