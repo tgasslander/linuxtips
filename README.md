@@ -18,6 +18,17 @@ Set the laptop screen (eDP-1-1) to the left of the external one (DP-4)
 xrandr --output eDP-1-1 --auto --left-of DP-4
 ```
 
+Set the external screen to auto resolution and primary
+```
+xrandr --output DP-4 --auto --primary
+```
+
+Get currently connected displays
+```
+xrandr | grep ' connected'
+```
+
+
 ## Vim mode in the terminal
 The terminal is normally in emacs mode.
 To get some proper vim bindings do:
