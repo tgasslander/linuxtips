@@ -39,6 +39,22 @@ Stuff like `CTRL-A` to go to the beginning of the line is now `0`. Your H-J-K-L 
 
 > Note: Luckily, for Mac users, this works in the mac terminal (at least iTerm) as well
 
+## X
+### Config
+Reload the `~/.Xresources` non-destructively
+```
+xrdb -merge ~/.Xresources
+```
+
+Remember that x applications read their config when they're launched.
+
+### xterm
+Make `xterm` handle "normal" copy/paste shortcut keys (`CTRL`+`SHIFT`+V). Add the foloowing to the `~/.Xresources`
+```
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+```
 
 ## SD Card
 First create `/mnt/sd` 
